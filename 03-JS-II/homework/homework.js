@@ -128,6 +128,15 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
+  if (numero % 3 === 0 && numero % 5 === 0) {
+    return 'fizzbuzz';
+  } else if (numero % 3 === 0) {
+    return 'fizz';
+  } else if (numero % 5 === 0) {
+    return 'buzz';
+  } else {
+    return numero;
+  }
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -157,6 +166,14 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
+  if (numero <= 1) {
+    return false;
+  } else for (let contador = 2; contador < numero; contador++) {
+    if (numero % contador === 0) {
+      return false;
+    }
+  }
+  return true;
 }
 
 function esVerdadero(valor) {
@@ -196,6 +213,14 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  let vA = 5;
+  let rF = numero;
+  let cN = 0;
+  do {
+    cN = (cN + 1);
+    rF = (rF + vA);
+  } while (cN < 8);
+  return rF;
 }
 
 
