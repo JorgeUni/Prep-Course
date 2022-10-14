@@ -78,6 +78,11 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  let rSuma = 0;
+  for (let i = 0; i < numeros.length; i++) {
+    rSuma = rSuma + numeros[i];
+  }
+  return rSuma;
 }
 
 
@@ -105,7 +110,13 @@ function multiplicarArgumentos() {
 function cuentoElementos(arreglo) {
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-
+  const arregloFinal = [];
+  for (let i = 0; i < arreglo.length; i++) {
+    if (arreglo[i] > 18) {
+      arregloFinal.push(arreglo[i]);
+    }
+  }
+  return arregloFinal.length;
 }
 
 
@@ -114,7 +125,11 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
-
+  if (numeroDeDia === 1 || numeroDeDia === 7) {
+    return 'Es fin de semana';
+  } else {
+    return 'Es dia Laboral';
+  }
 }
 
 
@@ -130,7 +145,12 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-
+  for (let i = 0; i < arreglo.length; i++) {
+    if (arreglo[i] === arreglo[i + 1]) {
+      return true;
+    }
+  }
+  return false;
 }
 
 
