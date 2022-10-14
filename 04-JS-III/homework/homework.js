@@ -90,6 +90,11 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  let rPromedio = 0;
+  for (let i = 0; i < resultadosTest.length; i++) {
+    rPromedio = rPromedio + resultadosTest[i];
+  }
+  return rPromedio / resultadosTest.length;
 }
 
 
@@ -97,6 +102,13 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  let numeroGrande = 0;
+  for (let i = 0; i < numeros.length; i++) {
+    if (numeros[i] > numeroGrande) {
+      numeroGrande = numeros[i];
+    }
+  }
+  return numeroGrande;
 }
 
 
@@ -104,6 +116,16 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+
+  if (arguments.length < 1) {
+    return 0;
+  } else {
+    let aProducto = 1;
+    for (let i = 0; i < arguments.length; i++) {
+      aProducto = aProducto * arguments[i];
+    }
+    return aProducto;
+  }
 }
 
 
@@ -137,7 +159,11 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-
+  if (n.toString().startsWith('9')) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 
@@ -159,6 +185,16 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  const mesesEncontrados = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === 'Enero' || array[i] === 'Marzo' || array[i] === 'Noviembre') {
+      mesesEncontrados.push(array[i]);
+    }
+  } if (mesesEncontrados.length < 3) {
+    return 'No se encontraron los meses pedidos';
+  } else {
+    return mesesEncontrados;
+  }
 }
 
 
@@ -166,6 +202,13 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  const numerosMayores = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > 100) {
+      numerosMayores.push(array[i]);
+    }
+  }
+  return numerosMayores;
 }
 
 
@@ -177,6 +220,20 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  const nuevoValor = [];
+  let valorSuma = numero;
+  let i = 0;
+  while (i < 10) {
+    valorSuma = valorSuma + 2;
+    if (valorSuma === i) {
+      break;
+    }
+    nuevoValor.push(valorSuma);
+    i++;
+  } if (i < 10) {
+    return 'Se interrumpió la ejecución';
+  }
+  return nuevoValor;
 }
 
 
@@ -187,6 +244,19 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  const arreNuevo = [];
+  let vaSuma = numero;
+  let i = 0;
+
+  while (i < 10) {
+    i++;
+    if (i === 5) {
+      continue;
+    }
+    vaSuma = vaSuma + 2;
+    arreNuevo.push(vaSuma);
+  }
+  return arreNuevo;
 }
 
 
