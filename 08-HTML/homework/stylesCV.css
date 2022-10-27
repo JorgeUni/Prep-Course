@@ -1,0 +1,129 @@
+.divPadre {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 50px;
+}
+
+/* ----------------------- INICIA DIV ----------------------- */
+.fotoDescripcion {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+}
+
+.fotoDescripcion>* {
+    flex: auto;
+}
+
+#foto {
+    flex-grow: 0;
+}
+
+#foto img {
+    width: 250px;
+    height: 250px;
+}
+
+/* Quitar viñeta */
+#descripcion ul {
+    list-style: none;
+}
+
+#descripcion {
+    background-color: #37474f;
+    padding: 20px;
+}
+
+#descripcion h2 {
+    color: whitesmoke;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#descripcion p {
+    font-size: 14px;
+    color: whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h3 {
+    padding: 10px;
+    color: #37474f;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* ----------------------- INICIA DIV ----------------------- */
+.educacionPersonal {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.categoria {
+    width: 250px;
+    align-self: center;
+}
+
+.informacion {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+}
+
+.detalles {
+    display: flex;
+    flex-direction: row;
+}
+
+.detalles p {
+    font-size: 14px;
+    color: #37474f;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.detalles1 {
+    width: 600px;
+}
+
+.detalles2 {
+    padding-left: 150px;
+    align-self: center;
+}
+
+.textNegritas {
+    font-weight: bold;
+
+}
+
+
+/* ----------------------- INICIA DIV ----------------------- */
+.experienciaLaboral {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+
+/* ----------------------- INICIA DIV ----------------------- */
+.skillHobbies {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.skillHobbies>* {
+    flex: auto;
+}
+
+.detalleSkill {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.detalleHobbies {
+    display: flex;
+    justify-content: flex-start;
+}
